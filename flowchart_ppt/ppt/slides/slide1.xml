@@ -1,0 +1,626 @@
+/*
+Location in PPTX structure:
+/ppt/slides/slide1.xml
+*/
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" 
+       xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"
+       xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
+  <p:cSld>
+    <p:spTree>
+      <!-- Title -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="1" name="Title"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="1524000" y="1397000"/>
+            <a:ext cx="6096000" cy="1397000"/>
+          </a:xfrm>
+        </p:spPr>
+        <p:txBody>
+          <a:p>
+            <a:r>
+              <a:rPr sz="3000" b="1">
+                <a:gradFill>
+                  <a:gsLst>
+                    <a:gs pos="0">
+                      <a:schemeClr val="accent1"/>
+                    </a:gs>
+                    <a:gs pos="100000">
+                      <a:schemeClr val="accent2"/>
+                    </a:gs>
+                  </a:gsLst>
+                </a:gradFill>
+              </a:rPr>
+              <a:t>Pressure Vessel Analysis Flowchart</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- Warning Node - Overpressure Analysis -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2" name="Warning Shape"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="4000000" y="2000000"/>
+            <a:ext cx="2000000" cy="1000000"/>
+          </a:xfrm>
+          <a:prstGeom prst="roundRect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="FEE2E2"/>
+          </a:solidFill>
+          <a:ln w="20000">
+            <a:solidFill>
+              <a:srgbClr val="EF4444"/>
+            </a:solidFill>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:p>
+            <a:r>
+              <a:t>Overpressure Analysis</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- Decision Node - Terminal Pressure -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="3" name="Decision Shape"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="4000000" y="3500000"/>
+            <a:ext cx="2000000" cy="1000000"/>
+          </a:xfrm>
+          <a:prstGeom prst="roundRect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="DBEAFE"/>
+          </a:solidFill>
+          <a:ln w="20000">
+            <a:solidFill>
+              <a:srgbClr val="3B82F6"/>
+            </a:solidFill>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:p>
+            <a:r>
+              <a:t>Terminal Pressure?</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- Connector between Warning and Decision -->
+      <p:cxnSp>
+        <p:nvCxnSpPr>
+          <p:cNvPr id="4" name="Connector 1"/>
+          <p:cNvCxnSpPr/>
+          <p:nvPr/>
+        </p:nvCxnSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="5000000" y="3000000"/>
+            <a:ext cx="0" cy="500000"/>
+          </a:xfrm>
+          <a:prstGeom prst="straightConnector1"/>
+          <a:ln w="9525">
+            <a:solidFill>
+              <a:schemeClr val="tx1"/>
+            </a:solidFill>
+          </a:ln>
+        </p:spPr>
+      </p:cxnSp>
+
+      <!-- Continue with remaining shapes and connectors... -->
+    
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="5" name="No Leak Shape"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="2000000" y="5000000"/>
+            <a:ext cx="2000000" cy="1000000"/>
+          </a:xfrm>
+          <a:prstGeom prst="roundRect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="DCFCE7"/>
+          </a:solidFill>
+        </p:spPr>
+        <p:txBody>
+          <a:p>
+            <a:r>
+              <a:t>1.0-1.3</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:r>
+              <a:rPr b="1"/>
+              <a:t>No Vessel Leak Concern</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:r>
+              <a:rPr sz="1800"/>
+              <a:t>Evaluate Relief Effluent</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- Middle Branch - 1/2" Leak -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="6" name="Leak Shape"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="4000000" y="5000000"/>
+            <a:ext cx="2000000" cy="1000000"/>
+          </a:xfrm>
+          <a:prstGeom prst="roundRect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="DCFCE7"/>
+          </a:solidFill>
+        </p:spPr>
+        <p:txBody>
+          <a:p>
+            <a:r>
+              <a:t>1.3-2×MAWP</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:r>
+              <a:rPr b="1"/>
+              <a:t>1/2" Leak</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:r>
+              <a:rPr sz="1800"/>
+              <a:t>Elev - BTM of vessel</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- Phase Analysis Branch -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="7" name="Phase Analysis"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6000000" y="5000000"/>
+            <a:ext cx="2000000" cy="1000000"/>
+          </a:xfrm>
+          <a:prstGeom prst="roundRect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="F3E8FF"/>
+          </a:solidFill>
+        </p:spPr>
+        <p:txBody>
+          <a:p>
+            <a:r>
+              <a:t>>2×MAWP</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:r>
+              <a:t>Phase Analysis</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- Phase Types (Liquid, Vapor, Two-Phase) -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="8" name="Liquid Phase"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="5000000" y="6500000"/>
+            <a:ext cx="1500000" cy="1000000"/>
+          </a:xfrm>
+          <a:prstGeom prst="roundRect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="F3E8FF"/>
+          </a:solidFill>
+        </p:spPr>
+        <p:txBody>
+          <a:p>
+            <a:r>
+              <a:rPr b="1"/>
+              <a:t>Liquid Phase</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:r>
+              <a:rPr sz="1800"/>
+              <a:t>Fill Rate</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:r>
+              <a:rPr sz="1800"/>
+              <a:t>Elev - BTM of vessel</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- Vapor Phase -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="9" name="Vapor Phase"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6700000" y="6500000"/>
+            <a:ext cx="1500000" cy="1000000"/>
+          </a:xfrm>
+          <a:prstGeom prst="roundRect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="F3E8FF"/>
+          </a:solidFill>
+        </p:spPr>
+        <p:txBody>
+          <a:p>
+            <a:r>
+              <a:rPr b="1"/>
+              <a:t>Vapor Phase</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:r>
+              <a:rPr sz="1800"/>
+              <a:t>Catastrophic Rupture</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:r>
+              <a:rPr sz="1800"/>
+              <a:t>Elev - BTM of vessel</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- Two-Phase Flow and Calculation -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="10" name="Two Phase"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="8400000" y="6500000"/>
+            <a:ext cx="1500000" cy="1000000"/>
+          </a:xfrm>
+          <a:prstGeom prst="roundRect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="F3E8FF"/>
+          </a:solidFill>
+        </p:spPr>
+        <p:txBody>
+          <a:p>
+            <a:r>
+              <a:t>Two-Phase Flow</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- Calculation Box -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="11" name="Calculation"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="8400000" y="8000000"/>
+            <a:ext cx="1500000" cy="1200000"/>
+          </a:xfrm>
+          <a:prstGeom prst="roundRect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="DCFCE7"/>
+          </a:solidFill>
+        </p:spPr>
+        <p:txBody>
+          <a:p>
+            <a:r>
+              <a:rPr sz="1800"/>
+              <a:t>< 95% LL by vol:</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:r>
+              <a:rPr b="1"/>
+              <a:t>Use Input Rate</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:r>
+              <a:rPr sz="1800"/>
+              <a:t>≥ 95% LL by vol:</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:r>
+              <a:rPr b="1"/>
+              <a:t>Calc Based on LL</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- Legend Section -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="12" name="Legend Title"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="1524000" y="9000000"/>
+            <a:ext cx="9144000" cy="500000"/>
+          </a:xfrm>
+        </p:spPr>
+        <p:txBody>
+          <a:p>
+            <a:r>
+              <a:rPr b="1"/>
+              <a:t>Legend:</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- Legend Items -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="13" name="Decision Point Legend"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="1524000" y="9500000"/>
+            <a:ext cx="2000000" cy="500000"/>
+          </a:xfrm>
+          <a:prstGeom prst="roundRect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="DBEAFE"/>
+          </a:solidFill>
+        </p:spPr>
+        <p:txBody>
+          <a:p>
+            <a:r>
+              <a:t>Decision Point</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+
+      <p:sp>
+          <p:nvSpPr>
+              <p:cNvPr id="14" name="Phase Analysis Legend"/>
+              <p:cNvSpPr/>
+              <p:nvPr/>
+          </p:nvSpPr>
+          <p:spPr>
+              <a:xfrm>
+                  <a:off x="4024000" y="9500000"/>
+                  <a:ext cx="2000000" cy="500000"/>
+              </a:xfrm>
+              <a:prstGeom prst="roundRect"/>
+              <a:solidFill>
+                  <a:srgbClr val="F3E8FF"/>
+              </a:solidFill>
+          </p:spPr>
+          <p:txBody>
+              <a:p>
+                  <a:r>
+                      <a:t>Phase Analysis</a:t>
+                  </a:r>
+              </a:p>
+          </p:txBody>
+      </p:sp>
+
+      <p:sp>
+          <p:nvSpPr>
+              <p:cNvPr id="15" name="Outcome Legend"/>
+              <p:cNvSpPr/>
+              <p:nvPr/>
+          </p:nvSpPr>
+          <p:spPr>
+              <a:xfrm>
+                  <a:off x="6524000" y="9500000"/>
+                  <a:ext cx="2000000" cy="500000"/>
+              </a:xfrm>
+              <a:prstGeom prst="roundRect"/>
+              <a:solidFill>
+                  <a:srgbClr val="DCFCE7"/>
+              </a:solidFill>
+          </p:spPr>
+          <p:txBody>
+              <a:p>
+                  <a:r>
+                      <a:t>Outcome</a:t>
+                  </a:r>
+              </a:p>
+          </p:txBody>
+      </p:sp>
+
+      <p:sp>
+          <p:nvSpPr>
+              <p:cNvPr id="16" name="Warning Legend"/>
+              <p:cNvSpPr/>
+              <p:nvPr/>
+          </p:nvSpPr>
+          <p:spPr>
+              <a:xfrm>
+                  <a:off x="9024000" y="9500000"/>
+                  <a:ext cx="2000000" cy="500000"/>
+              </a:xfrm>
+              <a:prstGeom prst="roundRect"/>
+              <a:solidFill>
+                  <a:srgbClr val="FEE2E2"/>
+              </a:solidFill>
+          </p:spPr>
+          <p:txBody>
+              <a:p>
+                  <a:r>
+                      <a:t>Warning</a:t>
+                  </a:r>
+              </a:p>
+          </p:txBody>
+      </p:sp>
+
+      <!-- Decision to Left Branch (No Leak) -->
+      <p:cxnSp>
+          <p:nvCxnSpPr>
+              <p:cNvPr id="20" name="Left Branch Connector"/>
+              <p:cNvCxnSpPr>
+                  <a:stCxn id="3"/>
+                  <a:endCxn id="5"/>
+              </p:cNvCxnSpPr>
+          </p:nvCxnSpPr>
+          <p:spPr>
+              <a:prstGeom prst="straightConnector1"/>
+              <a:ln w="9525"/>
+          </p:spPr>
+      </p:cxnSp>
+
+      <!-- Decision to Middle Branch (1/2" Leak) -->
+      <p:cxnSp>
+          <p:nvCxnSpPr>
+              <p:cNvPr id="21" name="Middle Branch Connector"/>
+              <p:cNvCxnSpPr>
+                  <a:stCxn id="3"/>
+                  <a:endCxn id="6"/>
+              </p:cNvCxnSpPr>
+          </p:nvCxnSpPr>
+          <p:spPr>
+              <a:prstGeom prst="straightConnector1"/>
+              <a:ln w="9525"/>
+          </p:spPr>
+      </p:cxnSp>
+
+      <!-- Decision to Phase Analysis -->
+      <p:cxnSp>
+          <p:nvCxnSpPr>
+              <p:cNvPr id="22" name="Right Branch Connector"/>
+              <p:cNvCxnSpPr>
+                  <a:stCxn id="3"/>
+                  <a:endCxn id="7"/>
+              </p:cNvCxnSpPr>
+          </p:nvCxnSpPr>
+          <p:spPr>
+              <a:prstGeom prst="straightConnector1"/>
+              <a:ln w="9525"/>
+          </p:spPr>
+      </p:cxnSp>
+
+      <!-- Phase Analysis to Three Phase Types -->
+      <p:cxnSp>
+          <p:nvCxnSpPr>
+              <p:cNvPr id="23" name="Liquid Phase Connector"/>
+              <p:cNvCxnSpPr>
+                  <a:stCxn id="7"/>
+                  <a:endCxn id="8"/>
+              </p:cNvCxnSpPr>
+          </p:nvCxnSpPr>
+          <p:spPr>
+              <a:prstGeom prst="straightConnector1"/>
+              <a:ln w="9525"/>
+          </p:spPr>
+      </p:cxnSp>
+
+      <!-- Phase Analysis to Vapor -->
+      <p:cxnSp>
+          <p:nvCxnSpPr>
+              <p:cNvPr id="24" name="Vapor Phase Connector"/>
+              <p:cNvCxnSpPr>
+                  <a:stCxn id="7"/>
+                  <a:endCxn id="9"/>
+              </p:cNvCxnSpPr>
+          </p:nvCxnSpPr>
+          <p:spPr>
+              <a:prstGeom prst="straightConnector1"/>
+              <a:ln w="9525"/>
+          </p:spPr>
+      </p:cxnSp>
+
+      <!-- Two-Phase Flow to Calculation -->
+      <p:cxnSp>
+          <p:nvCxnSpPr>
+              <p:cNvPr id="25" name="Two Phase Calculation Connector"/>
+              <p:cNvCxnSpPr>
+                  <a:stCxn id="10"/>
+                  <a:endCxn id="11"/>
+              </p:cNvCxnSpPr>
+          </p:nvCxnSpPr>
+          <p:spPr>
+              <a:prstGeom prst="straightConnector1"/>
+              <a:ln w="9525"/>
+          </p:spPr>
+      </p:cxnSp>
+
+
+    </p:spTree>
+  </p:cSld>
+  <p:clrMapOvr>
+    <a:masterClrMapping/>
+  </p:clrMapOvr>
+</p:sld>
